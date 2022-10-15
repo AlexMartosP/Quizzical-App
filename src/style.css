@@ -1,0 +1,135 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+/* General */
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: #1c1c1c;
+  color: #293264;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: auto;
+}
+
+.button {
+  display: block;
+  padding: 11px 22px;
+  font-size: 12px;
+  background: #4d5b9e;
+  border: none;
+  border-radius: 10px;
+  color: #f5f7fb;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  width: 650px;
+  height: 650px;
+  background-color: #f5f7fb;
+  background-image: url("./assets/yellow-blob.svg"), url(./assets/blue-blob.svg);
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  border-radius: 15px;
+}
+
+/* StartView */
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 100%;
+}
+
+.start__heading {
+  font-family: "Karla", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.start__button {
+  min-width: 190px;
+  padding-block: 15px;
+  margin-block-start: 20px;
+}
+
+/* Questions */
+.questions-container {
+  padding: 50px 50px 25px 50px;
+}
+
+.question {
+  padding-block-end: 15px;
+  border-bottom: 1px solid #dbdef0;
+}
+
+.question:not(:last-child) {
+  margin-block-end: 15px;
+}
+
+.question:last-child {
+  margin-block-end: 20px;
+}
+
+.question-title {
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+}
+
+.answers-list {
+  display: flex;
+  gap: 12px;
+  margin-block-start: 12px;
+}
+
+.answer {
+  min-width: 65px;
+  padding-block: 2px;
+  padding-inline: 10px;
+  border: 1px solid #4d5b9e;
+  border-radius: 8px;
+  color: #293264;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.answer.selected {
+  background-color: #d6dbf5;
+  border-color: #d6dbf5;
+}
+
+.check__button {
+  margin-inline: auto;
+}
+
+/* Finished */
+.finished-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.finished__text {
+  font-size: 12px;
+  font-weight: 700;
+}
